@@ -1,0 +1,383 @@
+@charset "UTF-8";
+@import url("/umkc-standards/umkc-standard.css");
+/* CSS Document */
+
+/* Standard Colors 
+Blue: #0066cc
+Dark Blue: #0e3e6e
+Sky Blue: #68ace5
+Gray: #6d7981
+Dark Gray: #36424a
+Light Gray: #dfe5e6
+Red: #ab0823
+Orange: #d6492a
+Yellow: #da9800
+Green: #5f692d
+Tan: #f4f0e5
+*/
+
+body { margin: 0; padding: 0; background: #FFFFFF; }
+
+p { font-size: 1em; line-height: 1.4em; padding: 0 0 5px 0; margin: 0;}
+h1 { font-size: 2em; color: #0066cc; padding: 0 0 10px 0; font-weight: normal; margin: 0;}
+h2 { font-size: 1.5em; color: #0066cc; font-weight: normal; padding: 0 0 3px 0; margin: 0; line-height: 1em}
+h3 { font-size: 1.2em; color: #5f692d; padding: 0 0 5px 0; margin: 0;}
+h4 { font-size: 1.1em; color: #0e3e6e; padding: 0 0 10px 0; margin: 0;}
+h5 { font-size: 1em; color: #36424a; letter-spacing: 1px; font-weight: normal; padding: 7px 0 2px 0; margin: 0;}
+h6 { font-size: 1em; color: #ab0823; font-weight: normal; padding: 10px 0 2px 0; margin: 0;}
+
+a:link { text-decoration: none; color:#0066cc; }
+a:visited { text-decoration: none;  color:#0066cc; }
+a:hover { text-decoration: underline;  color:#0e3e6e; }
+a:active { text-decoration: underline;  color:#0e3e6e;  }
+
+form { padding: 0 0 10px 0; margin: 0; }
+input { padding: 0; margin: 0; }
+
+
+/* ------- Layout ------- */
+
+
+#wrapper {
+position: relative;
+width: 100%;
+text-align: left;
+font-family: Helvetica; 
+font-size: 68.75%;
+}
+
+#innerwrap {
+position: relative;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+width: 940px;
+}
+
+/* ------- Sidebar -------*/
+#sidebarwrap {
+position: absolute;
+top: 0;
+left: 0;
+background: url(images/nav-bkgd.jpg) no-repeat;
+width: 180px; /*--This sets the WIDTH of the menu BACKGROUND-*/
+z-index: 11000;
+}
+
+#sidebar, #sidebar ul {
+float: left;
+list-style: none;
+text-align: left;
+padding: 10px 0 0 0;
+margin: 0;
+width: 180px;
+}
+
+#sidebar a {
+display: block;
+width: 160px; /*--This sets the WIDTH of the first layer menu TEXT--*/
+color: #0066cc;  /*--This sets the COLOR of the first layer menu TEXT--*/
+text-decoration: none;
+font-size: 1.5em;
+padding: 5px 0 5px 20px;
+}
+
+#sidebar li {
+background: url(images/nav-up.gif);
+width: 180px; /*--This sets the WIDTH of the first layer menu HOVER-*/
+float: left;
+height: 20px;
+line-height: 1em; /*--This sets the HEIGHT of first layer menu items-*/
+padding: 5px 0;
+margin: 1px 0;
+border-bottom: 1px solid #ffffff;
+}
+
+#sidebar li ul {
+position: absolute;
+left: -999em;
+margin-left: 180px; /*--Set this to match WIDTH of the first layer menu HOVER-*/
+margin-right: 0;
+margin-top : -2.5em;
+padding: 5px;
+width: 110px; /*--This sets the WIDTH of the second layer menu HOVER-*/
+font-weight: normal;
+background: #68ace5;  /*--This sets the COLOR of the second layer menu BACKGROUND--*/
+}
+
+#sidebar li li {
+background: url(images/nav-up.gif);
+text-align: left;
+margin: 0;
+line-height: 1.5em;
+width: 110px; /*--This sets the WIDTH of the second layer menu BACKGROUND--*/
+padding: 0;
+border-bottom: none;
+}
+
+#sidebar li ul a {
+font-size: 1em;
+width: 110px; /*--This sets the WIDTH of the second layer menu TEXT--*/
+padding: 3px 10px;
+}
+
+#sidebar li:hover ul, #sidebar li li:hover ul, #sidebar li.sfhovers ul, #sidebar li li.sfhovers ul {
+left: auto;
+}
+
+#sidebar li:hover, #sidebar li.sfhovers {
+background: url(images/nav-rollover.gif);  /*--This sets the COLOR of the first layer menu HOVER--*/
+}
+
+#sidebar li:hover a, #sidebar li.sfhovers a {
+color: #ffffff!important;
+}
+
+#sidebar li li:hover, #sidebar li li.sfhovers {
+background: url(images/gold.gif);  /*--This sets the COLOR of the second layer menu HOVER--*/
+}
+#sidebar li li:hover a, #sidebar li li.sfhovers a {
+color: #0e3e6e!important;  /*--This sets the COLOR of the second layer menu HOVER--*/
+}
+
+#on {
+color: #6d7981!important;
+}
+
+#quicklink {
+float: left;
+list-style: none;
+text-align: left;
+padding: 10px 0 0 0;
+margin-bottom: 0;
+width: 180px;
+}
+
+#quicklink a {
+display: block;
+width: 150px;
+color: #0e3e6e;
+text-decoration: none;
+font-size: 1.4em;
+padding: 5px 0 5px 20px;
+}
+
+#quicklink a:link { color: #0e3e6e; }
+#quicklink a:visited { color: #0e3e6e; }
+#quicklink a:hover { color: #ffffff; }
+#quicklink a:active { color: #ffffff; }
+
+
+#apply {
+background: #da9800;
+font-weight: bold;
+height: auto;
+line-height: 1em; /*--This sets the HEIGHT of first layer menu items-*/
+padding: 5px 0;
+margin: 2px 0;
+}
+#invest {
+background: #68ace5;
+font-weight: bold;
+height: auto;
+line-height: 1em; /*--This sets the HEIGHT of first layer menu items-*/
+padding: 5px 0;
+margin: 8px 0 0 0;
+}
+
+.feature-column {
+background-color: #36424a;
+float: left;
+width: 180px;
+margin-top: 40px;
+border: 1px #36424a solid;
+text-align: right;
+}
+
+#feature-white { background-color: #FFFFFF; }
+
+.column a:link { color: #ffffff; text-decoration: none; }
+.column a:visited { color: #ffffff; text-decoration: none; }
+.column a:hover { color: #ffcc00; text-decoration: none; }
+.column a:active { color: #ffcc00; text-decoration: none;}
+
+.column {
+font-size: 1em;
+height: 22px;
+margin-right: 5px;
+background: url(images/feature-arrow.gif) center right no-repeat;
+padding: 3px 0 0 0;
+}
+
+#lookup {
+clear: left;
+float: left;
+background: #dfe5e6;
+width: 140px;
+padding: 20px;
+margin: 20px 0 0 0;
+}
+
+#lookup h4 { padding: 0 0 3px 0; }
+
+.lookup_form {
+width: 140px;
+height: 25px;
+padding: 0 0 5px 0;
+margin: 0;
+background: top right url(images/lookup.gif) no-repeat;
+}
+
+.lookup_text {
+font: 10px Helvetica; 
+color: #000000; 
+font-weight: bold; 
+margin: 5px 0 0 5px;
+padding: 0px; 
+width: 100px;
+height: 20px;
+vertical-align: middle; 
+border: 0;
+background-color: transparent!important;
+}
+
+.lookup_button {
+float: right;
+color: #36424a;
+vertical-align: middle;
+font-weight: bold;
+font: 10px Helvetica; 
+border: 0;
+background-color: transparent!important;
+}
+
+/* ------- Content ------ */
+
+#content {
+position: relative;
+width: 740px;
+top: 20px;
+left: 200px;
+text-align: left;
+}
+
+#content h1 { display: block;}
+
+.clear {
+clear: both;
+}
+
+#feature_links {
+background: url(images/quicklinks-rpt.jpg) repeat-x;
+color: #FFFFFF;
+width: 740px;
+margin: 0;
+padding: 0;
+vertical-align: middle;
+height: 170px;
+}
+
+#feature_links a:link { color: #FFFFFF; }
+#feature_links a:visited { color: #FFFFFF; }
+#feature_links a:hover { color: #da9800; }
+#feature_links a:active { color: #da9800; }
+
+#feature_links h2 { color: #ffffff; margin-top: 5px; margin-bottom: 7px; }
+
+.feature_links_column1 {
+float: left;
+width: 165px;
+padding-top: 10px;
+padding-left: 20px;
+}
+
+.feature_links_column2 {
+float: left;
+width: 180px;
+padding-top: 10px;
+padding-left: 20px;
+}
+
+.links {
+width: 740px;
+height: auto;
+color: #0e3e6e;
+background: url(images/columns-rpt.gif) repeat-y;
+margin-top: 20px;
+}
+
+.links h3 { padding-top: 5px; }
+
+.links a:link { text-decoration: none; color:#0066cc; }
+.links a:visited { text-decoration: none;  color:#0066cc; }
+.links a:hover { text-decoration: underline;  color:#0e3e6e; }
+.links a:active { text-decoration: underline; color:#0e3e6e;  }
+
+.link_column {
+float: left;
+display: block;
+width: 165px;
+padding-left: 20px;
+}
+
+.category a:link { text-decoration: none; color:#5f692d; }
+.category a:visited { text-decoration: none;  color:#5f692d; }
+.category a:hover { text-decoration: underline; color:#5f692d; }
+.category a:active { text-decoration: underline;  color:#5f692d; }
+
+
+#news_events {
+width: 740px;
+height: auto;
+color: #36424a;
+margin-top: 20px;
+margin-bottom: 40px;
+}
+ 
+#news_events h2 { 
+float: left;
+color: #0066cc;
+display: block; 
+width: 340px;
+margin-right: 10px;
+background-color: #dfe5e6; 
+padding: 5px 0 5px 20px; 
+margin-bottom: 10px; 
+}
+
+#news {
+float: left;
+width: 330px;
+margin-right: 20px;
+padding-left: 20px;
+}
+#news h2 { 
+font-size: 1.2em; 
+line-height: 1.2em;
+color: #5f692d; 
+padding: 0 0 10px 0; 
+margin: 0; 
+display: inline; 
+background-color: transparent; 
+width: auto; 
+float: none;
+font-weight: bold;
+}
+
+#news img {
+float: left;
+padding: 0 20px 10px 0;
+}
+#events {
+float: left;
+width: 350px;
+padding-left: 20px;
+}
+
+#events p {
+color: #5f692d; 
+}
+#events img {
+float: left;
+padding: 0 20px 150px 0;
+}

@@ -1,0 +1,91 @@
+<link rel="stylesheet" href="mobile-standard.css" type="text/css" media="Screen" />
+
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+sfHover = function() {
+	var sfEls = document.getElementById("umkc_nav").getElementsByTagName("LI");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+//--><!]]></script>
+<script type="text/javascript">
+function dosearch() {
+var sf=document.searchform;
+for (i=sf.sengines.length-1; i > -1; i--) {
+if (sf.sengines[i].checked) {
+var submitto = sf.sengines[i].value + escape(sf.searchterms.value);
+}
+}
+window.location.href = submitto;
+return false;
+}
+</script>
+
+<div id="umkc_headerwrap">
+<div id="umkc_header">
+
+<div id="umkc_logo"><a href="http://www.umkc.edu/"><img src="http://www.umkc.edu/umkc-standards/images/logo-space.gif" alt="UMKC - University of Missouri-Kansas City" width="220" height="60" border="0"></a></div>
+
+<div id="umkc_message">
+<a href="#content" class="skip">Skip to Content</a>
+<div id="umkc_alert">&nbsp;</div>
+</div>
+
+<div id="umkc_search"> 
+<form name="searchform" onSubmit="return dosearch();" id="cse-search-box" action="">
+<div id="soptions"><label for="umkc">
+UMKC</label><input name="sengines" type="radio" class="searchRadio" value="http://www.umkc.edu/umkc-search/?cx=008281657408603500330%3Avpif2cmpa14&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=" checked="checked" id="umkc">
+&nbsp;<label for="facultystaff">Faculty/Staff</label><input name="sengines" type="radio" value="http://www.umkc.edu/lookup/search.cfm?LastName=" class="searchRadio" id="facultystaff">&nbsp;&nbsp;<label for="students">Students</label><input name="sengines" type="radio" value="http://www.umkc.edu/lookup/studentSearch.cfm?lastName=" class="searchRadio" id="students"></div>
+     	<input name="SearchSubmit" value="Search" type="image" src="http://www.umkc.edu/umkc-standards/images/go-button.gif" class="searchButton" alt="go"><input type="text" name="searchterms" class="searchInput" value="">
+	</form>
+</div>
+
+<div id="umkc_navbar">
+<ul id="umkc_nav">
+        <li><a href="http://www.umkc.edu/brand/hometiles/research.asp" style="border-right: none;">Research</a></li>
+        <li><a href="http://www.umkc.edu/brand/hometiles/myumkc.asp">myUMKC</a></li>
+        <li><a href="http://www.umkc.edu/brand/hometiles/library.asp">Libraries</a></li>
+        <li><a href="http://www.umkc.edu/brand/hometiles/invest-header.asp">Invest in UMKC</a></li>
+        <li><a href="http://www.umkc.edu/jobs/">Jobs</a></li>
+        <li><a href="http://www.umkc.edu/brand/hometiles/calendar-header.asp">Calendar</a></li>
+        <li><a href="http://www.umkc.edu/az-index/">A-Z Index</a></li>
+        <li><a href="http://www.umkc.edu/brand/hometiles/athletics.asp" >Athletics</a></li>
+        <li><a href="http://www.umkc.edu/brand/hometiles/admissions.asp">Admissions</a></li>
+   	 <li><a href="#">Academics</a>
+			<ul>
+                <li><a href="http://www.umkc.edu/provost/">Provost's Office</a></li>
+              <li><a href="http://www.umkc.edu/academics/">Schools and Departments</a></li>
+                <li><a href="http://www.sfa.umkc.edu/majormaps/">Majors and Programs</a></li>
+            </ul>
+        </li>
+		<li><a href="http://www.umkc.edu/aboutumkc/">About UMKC</a>
+        	<ul>
+            	<li><a href="http://www.umkc.edu/administration/">Administrative Offices</a></li>
+                <li><a href="http://www.umkc.edu/chancellor/">Chancellor's Office</a></li>
+                <li><a href="http://www.umkc.edu/facts/">Facts</a></li>
+                <li><a href="http://www.umkc.edu/history/">History</a></li>
+                <li><a href="http://www.umkc.edu/brand/hometiles/contact.asp">Maps</a></li>
+            </ul>
+        </li>
+    </ul> 
+</div>
+
+</div>
+
+<div id="umkc_mobilenav">
+<!--<a href="http://www.umkc.edu/" class="fullsite umkcicon">Full site</a>-->
+<a href="http://www.umkc.edu/lookup" class="umkcsearch umkcicon">Search</a>
+<a href="http://www.umkc.edu/mobile/navigation/" class="umkcmenu umkcicon" id="umkcnavigation">Menu</a>
+</div>
+
+
+</div>
+<a name="content"></a>
