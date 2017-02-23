@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Src="~/horizontalmenu.ascx" TagPrefix="uc1" TagName="horizontalmenu" %>
+<%@ Register Src="~/verticalmenu.ascx" TagPrefix="uc1" TagName="verticalmenu" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>IS Service Orders
+    </title>
+    <link href="<%=ResolveUrl("~/css/bootstrap.min.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/font-awesome/css/font-awesome.css")%>" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/1.0.4/css/dataTables.responsive.css" type="text/css" />
+    <link href="<%=ResolveUrl("~/css/animate.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveUrl("~/css/style.css")%>" rel="stylesheet" />
+
+    <!-- Mainly scripts -->
+
+    <script src="<%=ResolveUrl("~/js/jquery-2.1.1.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/bootstrap.js")%>"></script>
+    <script src="<%=ResolveUrl("common/jquery-validation/jquery.validate.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/plugins/metisMenu/jquery.metisMenu.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/plugins/slimscroll/jquery.slimscroll.min.js")%>"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="<%=ResolveUrl("~/js/inspinia.js")%>"></script>
+    <script src="<%=ResolveUrl("~/js/plugins/pace/pace.min.js")%>"></script>
+    <script src="<%=ResolveUrl("~/common/FancyBox/source/jquery.fancybox.js")%>"></script>
+    <link href="<%=ResolveUrl("~/common/FancyBox/source/jquery.fancybox.css")%>" rel="stylesheet" media="screen" />
+    <script src="<%=ResolveUrl("js/bootbox.min.js")%>"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="umkc-standards/umkc-styles.css" rel="stylesheet" />
+    <style>
+        #umkc_footerwrap {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body class="top-navigation skin-1">
+    <div id="wrapper" style="background-color: white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10">
+                    <div id="page-wrapper" class="gray-bg" style="overflow-y: auto; overflow-x: hidden; padding-bottom: 50px">
+                        <div class="row border-bottom">
+                            <uc1:horizontalmenu runat="server" ID="horizontalmenu" />
+                        </div>
+                        <div class="wrapper wrapper-content animated fadeInRight">
+                            <form id="service" runat="server">
+                                <div>
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="footer" style="background-color: #0065CC">
+                            <div class="pull-right">
+                                <span class="pull-right hidden-md hidden-lg" style="color: white">&copy; UMKC | v1.0</span>
+                                <span class="pull-right hidden-sm hidden-xs" style="color: white">&copy; University of Missouri - Kansas City | v1.0</span>
+                            </div>
+                            <div>
+                                <span class="hidden-xs" style="color: white">Need Help? Contact <a href="mailto:UMKCISInternalApplications-Support@umkc.edu" style="color: white"><u>UMKC Internal Applications</u></a></span>
+                                <span class="visible-xs-inline" style="color: white"><a href="mailto:UMKCISInternalApplications-Support@umkc.edu" style="color: white"><u>Need Help?</u></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+
+
+        <!-- Data Tables-->
+        <script src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+        <script src="//cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js"></script>
+        <script src="https://cdn.datatables.net/plug-ins/f2c75b7247b/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    </div>
+    <!--#include file= "umkc-standards/umkc-footer.html"-->
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body { margin: 0; padding: 0; }
+#umkc_headerwrap { background: bottom left url(images/header-bkgd.gif) repeat-x; width: 100%; height: 100px; font-family: Helvetica; 
+font-size: 68.75%; text-align: left; background-color: #FFFFFF; }
+#umkc_header { background: bottom left url(images/university-mo-kc.gif) no-repeat; width: auto; height: 100px; margin-left: 20px; padding-right: 20px; }
+#umkc_header a:link, #umkc_header a:visited { color: #36424a; }
+#umkc_header a:hover, #umkc_header a:active  { color: #002147; }
+#umkc_logo { float: left; width: 150px; padding: 0; margin: 0; }
+#umkc_logo img { width: 150px; }
+#umkc_message { float: left; width: 460px; height: 50px; display: block; }
+#umkc_alert { padding: 20px; font-size: 1.5em; color:#FF0000; }
+.skip { position: absolute; top: -20px; }
+#umkc_header form { padding: 0 0 10px 0; margin: 0; }
+#umkc_search { float: right; background: right top url(images/search.gif) no-repeat; width: 240px; height: 43px; padding: 7px 0 0 0; _padding: 7px 0 0 10px;/*IE fix*/ margin: 0; text-align: right; }
+#soptions { text-align: right; color:#6d7981; }
+.searchRadio { margin: 0 0 3px 2px; _margin: 5px 0 3px 2px; padding: 0; vertical-align: middle; height: 10px; width: 10px; }
+.searchInput { width: 110px; height: 20px; border: none; margin: 4px 0 0 5px; padding: 0; color: #000000; background-color: transparent!important; }
+.searchButton { float: right; height: 20px; width: 22px; background-color: transparent; border: none; margin: 7px 0 0 0; padding: 0; }
+#umkc_navbar { clear: left; position: relative; z-index: 9999; width: 100%; height: 20px; text-align: right;}
+#umkc_nav, #umkc_nav ul { list-style: none; line-height: 1em; font-weight: normal; padding: 0; margin: 0; }
+#umkc_nav a { display: block; color: #36424a; text-decoration: none; font-size: 11px; padding: 4px; margin: 0; border-right: solid 2px #dfe5e6; }
+#umkc_nav li { float: right; width: auto; padding: 0; }
+#umkc_nav li ul { position: absolute; left: -999em; height: auto; width: 17em; font-weight: normal; background: #e2e9eb; margin: 0; }
+#umkc_nav li li { text-align: left; width: 17em; height: auto; }
+#umkc_nav li ul a { color: #000000; padding: 0.55em; margin: 0; width: 16em; border-right: none; }
+#umkc_nav li ul ul { /* third-and-above-level lists */ width: 16em; margin: -1em 0 0 14em; }
+#umkc_nav li:hover ul ul, #umkc_nav li:hover ul ul ul, #umkc_nav li.sfhover ul ul, #umkc_nav li.sfhover ul ul ul { left: -9999em; }
+#umkc_nav li:hover ul, #umkc_nav li li:hover ul, #umkc_nav li li li:hover ul, #umkc_nav li.sfhover ul, #umkc_nav li li.sfhover ul, #umkc_nav li li li.sfhover ul { /* lists nested under hovered list items */ left: auto; }
+#umkc_nav li:hover, #umkc_nav li.sfhover { background: #68ace5; }
+#umkc_nav li li:hover, #umkc_nav li li.sfhover { background: #68ace5; }
+#umkc_footerwrap { position: relative; width: 100%; text-align: center; font-family: Helvetica; font-size: 65%; }
+#umkc_footer { position: relative; margin-left: auto; margin-right: auto; width: 890px; padding: 30px 50px; color: #6d7981; font-size: 1em; line-height: 1.3em; }
+#umkc_footer a:link, #umkc_footer a:visited, #umkc_footer a:hover, #umkc_footer a:active { color: #6d7981; }
+.footnav a { font-weight: bold; letter-spacing: 1px; padding: 3px;}
+.footnav a:link, .footnav a:visited { text-decoration: none; }
+.footnav a:hover, .footnav a:active { text-decoration: underline; }
+
+/*------Body layout------*/
+
+p { font-size: 1em; line-height: 1.4em; padding: 0 0 5px 0; margin: 0;}
+h1 { font-size: 2em; color: #0066cc; padding: 0 0 10px 0; font-weight: normal; margin: 0;}
+h2 {
+	font-size: 1.5em;
+	color: #0e3e6e;
+	padding: 10px 0 5px 0;
+	margin: 0;
+	line-height: 1.1em
+}
+h3 {
+	font-size: 1.25em;
+	color: #0066cc;
+	padding: 5px 0 5px 0;
+	margin: 0;
+	line-height: 1.2em;
+}
+h4 {
+	font-size: 1.1em;
+	color: #0e3e6e;
+	padding: 5px 0 1px 0;
+	margin: 0;
+}
+h5 {
+	font-size: 1.1em;
+	color: #36424a;
+	letter-spacing: 1px;
+	font-weight: bold;
+	padding: 7px 0 2px 0;
+	margin: 0;
+	line-height: 1.2em;
+}
+h6 {
+	font-size: 1em;
+	color: #333333;
+	font-weight: bold;
+	padding: 10px 0 2px 0;
+	margin: 0;
+}
+
+a:link { text-decoration: none; color:#0066cc; }
+a:visited { text-decoration: none;  color:#0066cc; }
+a:hover { text-decoration: underline;  color:#0e3e6e; }
+a:active { text-decoration: underline;  color:#0e3e6e;  }
+
+#wrapper {
+position: relative;
+width: 100%;
+min-height: 500px;
+text-align: left;
+font-family: Helvetica; 
+font-size: 68.75%;
+}
+
+#innerwrap {
+position: relative;
+text-align: left;
+margin-left: 20px;
+margin-right: 20px;
+width: 100%;
+}
+
+#titlebar {
+position: relative;
+width: 100%;
+text-align: left;
+height: 75px;
+background: #68ace5;
+}
+
+#titlebar h1 {
+float: left;
+font-size: 40px;
+color: #002147;
+font-weight: normal;
+padding: 20px 0 0 0;
+margin: 0 0 0 20px;
+}
+
+#content {
+position: relative;
+width: 70%;
+left: 200px;
+padding: 20px;
+margin: 0;
+text-align: left;
+}
+/* ------- Sidebar -------*/
+#sidebarwrap {
+	position: absolute;
+	width: 180px; /*--This sets the WIDTH of the menu BACKGROUND-*/
+	z-index: 11000;
+}
+
+#sidebar, #sidebar ul {
+float: left;
+list-style: none;
+text-align: left;
+padding: 10px 0 0 0;
+margin: 0;
+width: 200px;
+}
+
+#sidebar a {
+	display: block;
+	width: 180px; /*--This sets the WIDTH of the first layer menu TEXT--*/
+	color: #0e3e6e;  /*--This sets the COLOR of the first layer menu TEXT--*/
+	text-decoration: none;
+	font-size: 1.1em;
+	padding: 5px 0 5px 20px;
+}
+
+#sidebar li {
+	position: relative;
+	width: 200px; /*--This sets the WIDTH of the first layer menu HOVER-*/
+	float: left;
+	line-height: 1.5em; /*--This sets the HEIGHT of first layer menu items-*/
+	padding: 5px 0;
+	margin: 0;
+	border-bottom: 1px solid #dfe5e6;
+}
+
+#sidebar li ul {
+	position: absolute;
+	left: -999em;
+	margin-left: 200px; /*--Set this to match WIDTH of the first layer menu HOVER-*/
+	margin-right: 0;
+	margin-top : 0px;
+	padding: 5px;
+	width: 180px; /*--This sets the WIDTH of the second layer menu HOVER-*/
+	font-weight: normal;  /*--This sets the COLOR of the second layer menu BACKGROUND--*/
+	background-color: #68ace5;
+	top: 0;
+}
+
+#sidebar li li {
+text-align: left;
+margin: 0;
+line-height: 1.5em;
+width: 130px; /*--This sets the WIDTH of the second layer menu BACKGROUND--*/
+padding: 0;
+border-bottom: none;
+}
+
+#sidebar li ul a {
+	font-size: 1.1em;
+	width: 130px;
+	padding-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+#sidebar li:hover ul, #sidebar li li:hover ul, #sidebar li.sfhovers ul, #sidebar li li.sfhovers ul {
+left: auto;
+}
+
+#sidebar li:hover, #sidebar li.sfhovers {
+background: #68ace5;  /*--This sets the COLOR of the first layer menu HOVER--*/
+}
+
+#sidebar li li:hover, #sidebar li li.sfhovers {
+background: #dfe5e6;  /*--This sets the COLOR of the second layer menu HOVER--*/
+}
+
+.column a:link { color: #ffffff; text-decoration: none; }
+.column a:visited { color: #ffffff; text-decoration: none; }
+.column a:hover { color: #da9800; text-decoration: none; }
+.column a:active { color: #da9800; text-decoration: none;}
+
+.column {
+	font-size: 1em;
+	height: 22px;
+	margin-right: 5px;
+	padding: 5px 23px 0 0;
+	background-image: url(../images/feature-arrow.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.feature {
+	float: left;
+	width: 200px;
+	background-color: #FFFFFF;
+}
+
+.feature-column {
+	float: left;
+	width: 200px;
+	margin-top: 20px;
+	background-color: #36424a;
+	border: 1px #36424a solid;
+	text-align: right;
+}
+
+.feature h2 { 
+font-family: Georgia, "Times New Roman", Times, serif;
+font-style: italic;
+color: #5f692d;
+font-size: 1.4em;
+line-height: 1.4em;
+padding: 20px 10px 5px 20px;
+}
+
+.feature h3 { padding: 20px 10px 5px 20px; }
+
+.feature p { padding: 5px 10px 20px 20px; }
+
+.feature h6 {
+color: #0e3e6e;
+padding: 5px 10px 20px 20px;
+}
+.feature_img {
+	padding-top: 10px;
+}

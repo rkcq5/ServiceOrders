@@ -1,0 +1,179 @@
+<!-- Navigation Dropdown Function -->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+sfHover = function() {
+	var sfEls = document.getElementById("umkc_nav").getElementsByTagName("LI");
+	for (var i=0; i<sfEls.length; i++) {
+		sfEls[i].onmouseover=function() {
+			this.className+=" sfhover";
+		}
+		sfEls[i].onmouseout=function() {
+			this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+		}
+	}
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+
+//--><!]]></script>
+
+<!-- Desktop Search -->
+<script type="text/javascript">
+function dosearch() {
+var sf=document.searchform;
+for (i=sf.sengines.length-1; i > -1; i--) {
+if (sf.sengines[i].checked) {
+var submitto = sf.sengines[i].value + escape(sf.searchterms.value);
+}
+}
+window.location.href = submitto;
+return false;
+}
+</script>
+
+<!-- Mobile Search -->
+<script type="text/javascript">
+function domobilesearch() {
+var msf=document.mobilesearchform;
+var searchQuery = "http://www.umkc.edu/umkc-search/?cx=008281657408603500330%3Avpif2cmpa14&cof=FORID%3A10&ie=UTF-8&q=" + msf.mobilesearchterms.value;
+window.location.href = searchQuery;
+return false;
+}
+</script>
+
+
+<!-- Mobile Menu Toggle -->
+
+<script>
+//<![CDATA[ 
+	var divState = {};
+	function showhide(id) {
+		if (document.getElementById) {
+			var divid = document.getElementById(id);
+			divState[id] = (divState[id]) ? false : true;
+			//close others
+			for (var div in divState){
+				if (divState[div] && div != id){
+					document.getElementById(div).style.display = 'none';
+					divState[div] = false;
+				}
+			}
+			divid.style.display = (divid.style.display == 'block' ? 'none' : 'block');
+		}
+	}
+//]]> 
+</script>
+
+<div id="umkc_headerwrap">
+	<div id="umkc_header">
+		<div id="umkc_logo">
+			<a href="http://www.umkc.edu/" title="UMKC Home Page">
+				<img id="umkcLogo" src="http://www.umkc.edu/umkc-standards/images/umkc-logo-blue@2x.png" alt="UMKC Logo">
+				<img id="umkcType" src="http://www.umkc.edu//umkc-standards/images/umkc-type.gif" alt="University of Missouri-Kansas City">
+			</a>
+		</div>
+		<div id="desktopSearch" class="searchContainer">
+			<form action="" id="cse-search-box" name="searchform" onsubmit=
+			"return dosearch();">
+				<div id="soptions">
+					<label for="umkc">UMKC</label> <input checked="checked" class=
+					"searchRadio" id="umkc" name="sengines" type="radio" value="http://www.umkc.edu/umkc-search/?cx=008281657408603500330%3Avpif2cmpa14&amp;cof=FORID%3A10&amp;ie=UTF-8&amp;q=">
+					&nbsp; <label for="facultystaff">Faculty/Staff</label>
+					<input class="searchRadio" id="facultystaff" name="sengines"
+					type="radio" value=
+					"http://www.umkc.edu/lookup/search.cfm?LastName=">&nbsp;&nbsp;
+					<label for="students">Students</label> <input class=
+					"searchRadio" id="students" name="sengines" type="radio" value=
+					"http://www.umkc.edu/lookup/studentSearch.cfm?lastName=">
+				</div>
+				<div id="searchBoxWrap">
+					<input alt="go" class="searchButton" name="SearchSubmit" type="submit" value="">
+					<input class="searchInput" name="searchterms" type="text" value="" placeholder="search...">
+				</div>
+			</form>
+		</div>
+		<div id="umkc_navbar">
+			<ul id="umkc_nav">
+				<li><a href="http://www.umkc.edu/brand/hometiles/research.asp" style="border-right: none;">Research</a></li>
+				<li><a href="http://www.umkc.edu/brand/hometiles/myumkc.asp">myUMKC</a></li>
+				<li><a href="http://www.umkc.edu/brand/hometiles/library.asp">Libraries</a></li>
+				<li><a href="http://www.umkc.edu/brand/hometiles/invest-header.asp">Invest in UMKC</a></li>
+				<li><a href="http://www.umkc.edu/jobs/">Jobs</a></li>
+				<li><a href="http://www.umkc.edu/brand/hometiles/calendar-header.asp">Calendar</a></li>
+				<li><a href="http://www.umkc.edu/az-index/">A-Z Index</a></li>
+				<li><a href="http://www.umkc.edu/brand/hometiles/athletics.asp" >Athletics</a></li>
+				<li><a href="http://www.umkc.edu/brand/hometiles/admissions.asp">Admissions</a></li>
+				<li><a href="#">Academics</a>
+					<ul>
+						<li><a href="http://www.umkc.edu/provost/">Provost's Office</a></li>
+						<li><a href="http://www.umkc.edu/academics/">Schools and Departments</a></li>
+						<li><a href="http://www.umkc.edu/majormaps/">Majors and Programs</a></li>
+					</ul>
+				</li>
+				<li><a href="http://www.umkc.edu/aboutumkc/">About UMKC</a>
+					<ul>
+						<li><a href="http://www.umkc.edu/administration/">Administrative Offices</a></li>
+						<li><a href="http://www.umkc.edu/chancellor/">Chancellor's Office</a></li>
+						<li><a href="http://www.umkc.edu/facts/">Facts</a></li>
+						<li><a href="http://www.umkc.edu/history/">History</a></li>
+						<li><a href="http://www.umkc.edu/brand/hometiles/contact.asp">Maps</a></li>
+					</ul>
+				</li>
+			</ul> 
+		</div>
+	</div> <!-- END #umkc_header -->
+	<div id="mobileNavContainer">
+		<a href="javascript:void(null)" onClick="showhide('mobileNavBreakout');">MENU</a>
+		<div id="mobileNavBreakout">
+			<div id="mobileSearch" class="searchContainer">
+				<form action="" name="mobilesearchform" onsubmit=
+			"return domobilesearch();">
+					<input type="text" placeholder="search..." name="mobilesearchterms" value="">
+					<input type="submit" name="SearchSubmit" value="">
+				</form>
+			</div>
+			<div class="mobileLinkColumn mobileLinkColumnleft">
+				<ul>
+					<li><a href="http://www.umkc.edu/aboutumkc/">About UMKC</a>
+						<ul>
+							<li><a href="http://www.umkc.edu/administration/">Administrative Offices</a></li>
+							<li><a href="http://www.umkc.edu/chancellor/">Chancellor's Office</a></li>
+							<li><a href="http://www.umkc.edu/facts/">Facts</a></li>
+							<li><a href="http://www.umkc.edu/history/">History</a></li>
+							<li><a href="http://www.umkc.edu/brand/hometiles/contact.asp">Maps</a></li>
+						</ul>
+					</li>
+					<li><span id="mobileLinkHeader">Academics</span>
+						<ul>
+							<li><a href="http://www.umkc.edu/provost/">Provost's Office</a></li>
+							<li><a href="http://www.umkc.edu/academics/">Schools and Departments</a></li>
+							<li><a href="http://www.umkc.edu/majormaps/">Majors and Programs</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="mobileLinkColumn mobileLinkColumnRight">
+				<ul>
+					<li><span id="mobileLinkHeader">Quick Links</span>
+						<ul>
+							<li><a href="http://www.umkc.edu/brand/hometiles/admissions.asp">Admissions</a></li>
+							<li><a href="http://www.umkc.edu/az-index/">A-Z Index</a></li>
+							<li><a href="http://www.umkc.edu/brand/hometiles/athletics.asp" >Athletics</a></li>
+							<li><a href="http://www.umkc.edu/brand/hometiles/calendar-header.asp">Calendar</a></li>
+							<li><a href="http://www.umkc.edu/jobs/">Jobs</a></li>
+							<li><a href="http://www.umkc.edu/brand/hometiles/invest-header.asp">Invest in UMKC</a></li>
+							<li><a href="http://www.umkc.edu/brand/hometiles/library.asp">Libraries</a></li>
+							<li><a href="http://www.umkc.edu/brand/hometiles/myumkc.asp">myUMKC</a></li>
+							<li><a href="http://www.umkc.edu/brand/hometiles/research.asp" style="border-right: none;">Research</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div style="clear:both;"></div>
+		</div><!-- END #mobileNavBreakout -->
+		<div style="clear:both;"></div>
+	</div><!--END #mobileNavContainer -->
+	<div style="clear:both;"></div>
+
+</div><!-- END #umkc_headerwrap -->
+<a name="content"></a>
+<a name="top"></a>
